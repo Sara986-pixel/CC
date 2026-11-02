@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How well do you know me ft. The one and only Sara</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- floating bubbles (made by script.js, click them to pop!) -->
+  <div id="bubbles" aria-hidden="true"></div>
+
+  <main class="wrap">
+
+    <!-- Sara the figurine -->
+    <div class="sara" id="sara" data-mood="happy">
+      <div class="speech" id="speech">Hiii! I'm Sara. Think you know me? 💖</div>
+
+      <svg class="sara-svg" viewBox="0 0 120 150" role="img" aria-label="Cartoon figurine of Sara">
+        <ellipse cx="60" cy="144" rx="28" ry="5" fill="rgba(80,40,120,.15)"/>
+
+        <!-- bun + back hair -->
+        <circle cx="60" cy="18" r="13" fill="#5b3a78"/>
+        <ellipse cx="60" cy="62" rx="40" ry="42" fill="#5b3a78"/>
+
+        <!-- dress + arms -->
+        <path d="M34 140 Q34 100 60 98 Q86 100 86 140 Z" fill="#ff8fc7"/>
+        <circle cx="33" cy="118" r="7" fill="#ffd9c2"/>
+        <circle cx="87" cy="118" r="7" fill="#ffd9c2"/>
+        <circle cx="60" cy="118" r="3" fill="#fff" opacity=".7"/>
+
+        <!-- face -->
+        <circle cx="60" cy="68" r="32" fill="#ffd9c2"/>
+
+        <!-- fringe -->
+        <path d="M28 62 Q32 32 60 32 Q88 32 92 62 Q80 46 60 48 Q40 46 28 62 Z" fill="#5b3a78"/>
+
+        <!-- bow -->
+        <path d="M60 24 L45 15 L45 33 Z M60 24 L75 15 L75 33 Z" fill="#ff5fa8"/>
+        <circle cx="60" cy="24" r="4.5" fill="#ff3d8f"/>
+
+        <!-- eyes -->
+        <g class="eye"><ellipse cx="47" cy="70" rx="4.5" ry="6" fill="#3b2a4a"/><circle cx="48.5" cy="67.5" r="1.8" fill="#fff"/></g>
+        <g class="eye"><ellipse cx="73" cy="70" rx="4.5" ry="6" fill="#3b2a4a"/><circle cx="74.5" cy="67.5" r="1.8" fill="#fff"/></g>
+
+        <!-- blush -->
+        <ellipse cx="38" cy="81" rx="6.5" ry="3.8" fill="#ff9db8" opacity=".75"/>
+        <ellipse cx="82" cy="81" rx="6.5" ry="3.8" fill="#ff9db8" opacity=".75"/>
+
+        <!-- mouths (shown depending on mood) -->
+        <path class="mouth m-happy" d="M50 82 Q60 96 70 82 Z" fill="#c2456b"/>
+        <path class="mouth m-neutral" d="M53 86 Q60 90 67 86" fill="none" stroke="#c2456b" stroke-width="2.5" stroke-linecap="round"/>
+        <path class="mouth m-sad" d="M52 90 Q60 81 68 90" fill="none" stroke="#c2456b" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <div class="card">
+
+      <!-- Start screen -->
+      <section id="start-screen">
+        <h1>How well do you know me <span class="ft">ft. The one and only Sara</span></h1>
+        <p class="subtitle">10 questions. 4 options each. Let's see if you're really a bestie 👀</p>
+        <label class="name-label" for="name-input">Your name</label>
+        <input id="name-input" type="text" maxlength="20" placeholder="Type your name..." autocomplete="off">
+        <button id="start-btn" class="btn">Let's go! ✨</button>
+      </section>
+
+      <!-- Quiz screen -->
+      <section id="quiz-screen" hidden>
+        <div class="top">
+          <span id="progress-text"></span>
+          <span id="score-text"></span>
+        </div>
+        <div class="bar"><div id="progress-bar"></div></div>
+
+        <h2 id="question"></h2>
+        <div id="options" class="options"></div>
+        <button id="next-btn" class="btn" hidden>Next</button>
+      </section>
+
+      <!-- Result screen -->
+      <section id="result-screen" hidden>
+        <p class="result-name" id="result-name"></p>
+        <p class="final-score" id="final-score"></p>
+        <h2 id="verdict-title"></h2>
+        <p class="subtitle" id="verdict-text"></p>
+
+        <div class="btn-row">
+          <button id="share-btn" class="btn">Copy my result 💌</button>
+          <button id="restart-btn" class="btn btn-alt">Try again 🔁</button>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
